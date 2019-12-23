@@ -1,3 +1,5 @@
+import { Person } from './person.interface';
+
 export interface InfoPage {
     title?: string;
     email?: string;
@@ -7,5 +9,5 @@ export interface InfoPage {
     twitter?: string;
     instagram?: string;
     tumblr?: string;
-    team?: any[];
+    team?: Person[];
 }
