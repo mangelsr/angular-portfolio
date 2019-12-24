@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Params } from '@angular/router';
 
 import { ProductsService } from 'src/app/services/products.service';
 
@@ -16,7 +16,7 @@ export class SearchComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.route.params.subscribe((params: any) => {
+    this.route.params.subscribe((params: Params) => {
       console.log(params.term);
       this.productService.searchProduct(params.term);
     });
